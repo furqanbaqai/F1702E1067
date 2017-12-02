@@ -1,0 +1,10 @@
+<li class="main-heading-video">
+<a class="open-section" href="https://www.geo.tv/latest/170174-firing-near-university-of-agriculture-peshawar" title="At least 11 injured as terrorists attack Peshawar Agriculture Directorate">
+<span class="video-icon"><img src="https://www.geo.tv/assets/front/images/video-icon.svg"></span> <img src="https://www.geo.tv/assets/uploads/updates/2017-12-01/l_170174_111403_updates.jpg" title="At least 11 injured as terrorists attack Peshawar Agriculture Directorate" alt="At least 11 injured as terrorists attack Peshawar Agriculture Directorate">
+<div class="slider-title-area">
+<div class="text-hed-wrap">
+<h1>At least 11 injured as terrorists attack Peshawar Agriculture Directorate</h1>
+</div>
+</div>
+</a>
+</li>
