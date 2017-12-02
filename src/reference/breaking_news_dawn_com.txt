@@ -1,0 +1,22 @@
+<div class="px-2">
+      
+    <!-- box/label -->
+
+    <span class="badge  size-three     theme--live    my-4"><a title="Live" href="/pakistan" class="">Live</a></span>
+
+    <!-- box/title title-xxxlarge-italic -->
+    <h2 data-layout="story" data-id="1374048" class="story__title    size-ten  text--italic  theme--multimedia  theme--interactive--multimedia  "><a href="https://www.dawn.com/news/1374048/peshawar-agricultural-directorate-attacked-4-terrorists-killed" class="story__link">Peshawar Agricultural Directorate attacked, 4 terrorists killed</a></h2>
+
+
+    <!-- box/excerpt -->
+    <div class="story__excerpt    size-five  theme--multimedia    mb-4">At least 16 people injured as terrorists attack hostel of Agricultural Directorate. 
+    </div>
+<!-- box/date --><span class="story__time  size-three  caps    "><span class="timestamp--label">Updated</span> <span class="timestamp--time  timeago" title="Dec 01, 2017 11:15am">about a minute ago</span></span> 
+    <!-- box/social -->
+<div class="  clearfix  social--top  social--right">    <div class="social    social--icon  social--facebook    float-left  d-none  d-lg-block    mt-2  " aria-hidden="true">
+        <a onclick="return !window.open(this.href, 'Share on Facebook', 'width=640, height=536')" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.dawn.com%2Fnews%2F1374048&amp;display=popup&amp;ref=plugin" target="_blank"></a>
+    </div>    <div class="social    social--icon  social--twitter  float-left  d-none  d-lg-block    mt-2  " aria-hidden="true">
+        <a onclick="return !window.open(this.href, 'Tweet', 'width=640, height=300')" href="https://twitter.com/share?text=Peshawar%20Agricultural%20Directorate%20attacked%2C%204%20terrorists%20killed&amp;url=https%3A%2F%2Fwww.dawn.com%2Fnews%2F1374048&amp;counturl=https%3A%2F%2Fwww.dawn.com%2Fnews%2F1374048" target="_blank"></a>
+    </div>    <div class="social    social--comment  social--tiny    float-left  d-none  d-lg-block    mt-2" aria-hidden="true">
+      <a href="https://www.dawn.com/news/1374048/peshawar-agricultural-directorate-attacked-4-terrorists-killed#comments">1</a>
+    </div></div>    </div>
