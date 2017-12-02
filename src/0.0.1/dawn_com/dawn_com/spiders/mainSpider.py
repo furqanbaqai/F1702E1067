@@ -20,10 +20,12 @@ import hashlib
 class QuotesSpider(scrapy.Spider):
     name = "mainpage"
 
+    # Constructor
     def start_requests(self):
         url = 'https://www.dawn.com'        
         yield scrapy.Request(url=url, callback=self.parse)
 
+    # Procedure called for parsing the content
     def parse(self, response):
         articles=response.xpath('//article[@data-layout="story"]')
         for index,article in enumerate(articles):
