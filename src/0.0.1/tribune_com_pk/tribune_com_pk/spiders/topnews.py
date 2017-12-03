@@ -20,11 +20,14 @@ from tribune_com_pk.items import TribuneComPkItem
 
 
 class MainpageSpider(scrapy.Spider):
-    name = 'mainpage'
+    name = 'topnews'
     allowed_domains = ['www.tribune.com.pk']
     start_urls = ['https://www.tribune.com.pk/']
     
     def parse(self, response):
+        # Step#1: 
+        triItem = TribuneComPkItem()                                        
+        # Step#1: Scrap all latest news
         articles = response.xpath('//div[contains(@class, "main")]/div[@class="span-8"]/div')
         for index, article in enumerate(articles):
             headline = None
@@ -38,14 +41,15 @@ class MainpageSpider(scrapy.Spider):
             detail_href = article.xpath('div/a[@class="image"]/@href').extract_first()
             imagepath = article.xpath('div/a[@class="image"]/img[1]/@src').extract_first()
             # Creating item of the scrapped object
-            triItem = TribuneComPkItem()                        
+            
             triItem['source'] = 'tribune.com.pk'
             triItem['section'] = 'main'
             triItem['index'] = str(index)
-            triItem['headline'] = headline
+            triItem['headline'] = repr(headline.replace('\\xad',''))
             triItem['head_hash_sha256'] =  hashlib.sha256(str.encode(headline)).hexdigest()
-            triItem['excerpt'] = excerpt
+            triItem['excerpt'] = repr(excerpt.replace('\\xad',''))
             triItem['imagepath'] = imagepath
             triItem['detail_href'] = detail_href
             # Yielding item
             yield triItem
+        
