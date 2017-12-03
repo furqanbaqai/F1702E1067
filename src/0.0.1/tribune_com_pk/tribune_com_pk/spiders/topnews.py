@@ -11,7 +11,7 @@ https://www.gnu.org/licenses/gpl-3.0.en.html for more details.
 
 Authur: Muhammad Furqan Baqai [MFB]
 Change History
-[MFB:2017-11-2] Initial checkin
+[MFB:2017-12-2] Initial checkin
 
 """
 import scrapy

@@ -1,4 +1,20 @@
 # -*- coding: utf-8 -*-
+"""
+WebScrapping utility for scrapping tribune.com.pk
+https://github.com/furqanbaqai/F1702E1067
+
+Automzation script for browsing and scrapping https://www.tribune.com.pk
+This sript will pull all data and push JSON content to ActiveMQ queue
+Class below will scrap breaking news only
+
+Distributed under GPLv3 license agreement. Please refere to link:
+https://www.gnu.org/licenses/gpl-3.0.en.html for more details.
+
+Authur: Muhammad Furqan Baqai [MFB]
+Change History
+[MFB:2017-12-3] Initial checkin
+
+"""
 import scrapy
 import hashlib
 import logging
