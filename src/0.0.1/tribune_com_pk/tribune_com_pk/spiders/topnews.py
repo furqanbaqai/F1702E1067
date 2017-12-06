@@ -43,11 +43,11 @@ class MainpageSpider(scrapy.Spider):
             # Creating item of the scrapped object
             
             triItem['source'] = 'tribune.com.pk'
-            triItem['section'] = 'main'
+            triItem['section'] = '`tponews'
             triItem['index'] = str(index)
-            triItem['headline'] = repr(headline.replace('\\xad',''))
-            triItem['head_hash_sha256'] =  hashlib.sha256(str.encode(headline)).hexdigest()
-            triItem['excerpt'] = repr(excerpt.replace('\\xad',''))
+            triItem['headline'] = headline.encode("ascii", "ignore").strip().decode("utf-8")
+            triItem['head_hash_sha256'] =  hashlib.sha256(headline.encode("ascii", "ignore").strip()).hexdigest()
+            triItem['excerpt'] = excerpt.encode("ascii", "ignore").strip().decode("utf-8")
             triItem['imagepath'] = imagepath
             triItem['detail_href'] = detail_href
             # Yielding item

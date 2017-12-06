@@ -1,82 +1,10 @@
 [
-    {
-        "section": "main",
-        "index": "0",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a21024d226c4.jpg",
-        "head_hash_sha256": "35dd8a0492e02f522f156d7c2a427eaab6243890040e9ebb9d212fd3069b2824",
-        "source": "dawn.com",
-        "headline": "Nine dead as gunmen storm hostel of Peshawar\u2019s Agricultural Training Institute",
-        "detail_href": "https://www.dawn.com/news/1374048/nine-dead-as-gunmen-storm-hostel-of-peshawars-agricultural-training-institute",
-        "excerpt": "At least 37 injured; three terrorists killed, one in custody; officials say attackers' handlers based in Afghanistan. \n    "
-    },
-    {
-        "section": "main",
-        "index": "1",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a2165c518357.jpg",
-        "head_hash_sha256": "7f982dde265e5d3fdce259cb464c553f74eaf1e840b442f1c98f063f37c0fbf9",
-        "source": "dawn.com",
-        "headline": "Child killed, two injured in explosion in Balochistan's Chaman",
-        "detail_href": "https://www.dawn.com/news/1374078/child-killed-two-injured-in-explosion-in-balochistans-chaman",
-        "excerpt": "Unknown terrorists hurl grenade outside gate of Christian Colony in Chaman; children hurt in explosion. \n    "
-    },
-    {
-        "section": "main",
-        "index": "2",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a2124f89194f.jpg",
-        "head_hash_sha256": "69876094e9f7040a413e73231a9ad28193a0493358d4cea3234b83a3008338ae",
-        "source": "dawn.com",
-        "headline": "Obama says Pakistan did not know whereabouts of Bin Laden",
-        "detail_href": "https://www.dawn.com/news/1374059/obama-says-pakistan-did-not-know-whereabouts-of-bin-laden",
-        "excerpt": "Former US president says some elements in Pakistan \"were not good partners\" in the US's so-called 'War on Terror'.  \n    "
-    },
-    {
-        "section": "main",
-        "index": "3",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a2140d96522d.jpg",
-        "head_hash_sha256": "b67ce8ab058728367307af0f67f240db20ffe56e17e0a29a9c2e52ccacb4db0b",
-        "source": "dawn.com",
-        "headline": "At SCO meeting, PM Abbasi calls for keeping politics out of regional trade",
-        "detail_href": "https://www.dawn.com/news/1374070/at-sco-meeting-pm-abbasi-calls-for-keeping-politics-out-of-regional-trade",
-        "excerpt": "Prime minister speaks at 16th meeting of the Council of the Heads of Government of the SCO in Sochi, Russia. \n    "
-    },
-    {
-        "section": "main",
-        "index": "4",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a20c0a58df8b.jpg?r=455726060",
-        "head_hash_sha256": "732edef611e4fd186676aa36d02512009a8cecadabf1dc38984d9d402316de94",
-        "source": "dawn.com",
-        "headline": "Factionalism hits Tehreek-i-Labbaik at the outset",
-        "detail_href": "https://www.dawn.com/news/1373982/factionalism-hits-tehreek-i-labbaik-at-the-outset",
-        "excerpt": "Tehreek-i-Labbaik Pakistan has begun disavowing the faction led by Dr Ashraf Jalali. \n    "
-    },
-    {
-        "section": "main",
-        "index": "5",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a2172b596d49.jpg",
-        "head_hash_sha256": "b313a593e456d84cd120e3ecf21b7245bffc9460ff14a5e7e29e94c0afe035b3",
-        "source": "dawn.com",
-        "headline": "Pope says 'Rohingya' in emotional encounter with refugees in Bangladesh",
-        "detail_href": "https://www.dawn.com/news/1374079/pope-says-rohingya-in-emotional-encounter-with-refugees-in-bangladesh",
-        "excerpt": "Pope seeks forgiveness from the refugees, calling for continued aid and advocacy. \n    "
-    },
-    {
-        "section": "main",
-        "index": "6",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a219ed937221.jpg",
-        "head_hash_sha256": "c05b03e2d339fd6e018d109c57e8d02afcaf2ae6bd7dbe68601cee5402a1d6e7",
-        "source": "dawn.com",
-        "headline": "Kabul ready to hold talks with Pakistan: Afghan president",
-        "detail_href": "https://www.dawn.com/news/1374083/kabul-ready-to-hold-talks-with-pakistan-afghan-president",
-        "excerpt": "\"We all have shared responsibilities and Afghanistan is ready to cooperate with all stakeholders.\" \n    "
-    },
-    {
-        "section": "main",
-        "index": "7",
-        "imagepath": "https://i.dawn.com/medium/2017/12/5a20b963850f7.jpg",
-        "head_hash_sha256": "db376eac6e669a949ea35b1022c53671c04e1584fdd256b8bf88fd877f61f01c",
-        "source": "dawn.com",
-        "headline": "PML-N moves to placate disgruntled legislators",
-        "detail_href": "https://www.dawn.com/news/1373970/pml-n-moves-to-placate-disgruntled-legislators",
-        "excerpt": "Ousted PM forms committee to reach out to fractious MNAs instead of taking action against them. \n    "
-    }
+{"head_hash_sha256": "c5f3c29d6c0343d0a38f82f60094b1ddc3b614eb174eb3625f9ad105c9301aae", "section": "main", "headline": "Punjab govt makes Model Town report public after court's orders", "index": "0", "excerpt": "FIR of Model Town Incident was filed on Raheel Sharif's intervention, Dr Tahirul Qadri says.", "detail_href": "https://www.dawn.com/news/1374691/punjab-govt-makes-model-town-report-public-after-courts-orders", "imagepath": "https://i.dawn.com/medium/2017/12/5a2654878ddf0.jpg", "source": "dawn.com"},
+{"head_hash_sha256": "188dfd80b11c71a2dad54b33e5282297385d394de9714e9c0d4264a4ff4addad", "section": "main", "headline": "Army chief briefs top brass on 'military diplomacy'", "index": "1", "excerpt": "Corps Commanders Conference briefed on Gen Bajwa's recent visits abroad, meetings with visiting foreign dignitaries.", "detail_href": "https://www.dawn.com/news/1374711/army-chief-briefs-top-brass-on-military-diplomacy", "imagepath": "https://i.dawn.com/medium/2017/12/5a26ac8596bb7.jpg", "source": "dawn.com"},
+{"head_hash_sha256": "9d33f7565ed44a92558b69d972b8e5debdc2fea89262cf6252c2e9f9ba2b1e87", "section": "main", "headline": "6 killed in North Waziristan blast targeting army recruits", "index": "2", "excerpt": "Reports suggest target of the IED was a military vehicle transporting civilian candidates for an army recruitment drive.", "detail_href": "https://www.dawn.com/news/1374708/6-killed-in-north-waziristan-blast-targeting-army-recruits", "imagepath": "https://i.dawn.com/medium/2017/12/5a269fe54fd80.jpg", "source": "dawn.com"},
+{"head_hash_sha256": "2bdc66660c2c4ca83b10df6772cf42e92795072ebe665fb649cd203c89618af7", "section": "main", "headline": "Minority faith groups should feel their rights are the most secure in Pakistan: Supreme Court", "index": "3", "excerpt": "Pakistan's minorities should feel they are given more consideration compared to the average citizen, court says.", "detail_href": "https://www.dawn.com/news/1374695/minority-faith-groups-should-feel-their-rights-are-the-most-secure-in-pakistan-supreme-court", "imagepath": "https://i.dawn.com/medium/2017/12/5a26608b619f9.jpg", "source": "dawn.com"},
+{"head_hash_sha256": "1866796fbf44c18302127b57009e80dd756358ff1373a0193890aac55f7c6860", "section": "main", "headline": "Three CPEC projects hit snags as China mulls new financing rules", "index": "4", "excerpt": "Three road projects in jeopardy, not clear how many more impacted.", "detail_href": "https://www.dawn.com/news/1374532/three-cpec-projects-hit-snags-as-china-mulls-new-financing-rules", "imagepath": "https://i.dawn.com/medium/2017/12/5a25a19227f98.jpg", "source": "dawn.com"},
+{"head_hash_sha256": "531e314f2a2f489e8ef671259c5c025a4daf08b426738e253b4305ffa936b960", "section": "main", "headline": "Open to forming political alliance with JuD, LeT: Musharraf", "index": "5", "excerpt": "\"I will say it proudly that LeT and JuD are both very good organisations of Pakistan,\" says former president.", "detail_href": "https://www.dawn.com/news/1374693/open-to-forming-political-alliance-with-jud-let-musharraf", "imagepath": "https://i.dawn.com/medium/2017/12/5a2656af1094e.jpg", "source": "dawn.com"},
+{"head_hash_sha256": "9ead3dfae183e3503ee61656e1837565515af3c25d734538ba7114b73ac006e6", "section": "main", "headline": "Erdogan warns Trump, Saudis voice alarm over possible US move on Jerusalem", "index": "6", "excerpt": "The EU also warns of possible serious repercussions if Trump decides to recognise Jerusalem as the Israeli capital.", "detail_href": "https://www.dawn.com/news/1374696/erdogan-warns-trump-saudis-voice-alarm-over-possible-us-move-on-jerusalem", "imagepath": "https://i.dawn.com/medium/2017/12/5a267053ac2fd.png", "source": "dawn.com"},
+{"head_hash_sha256": "23351a42225d89279112ac84c7f3f1ee146b846cf47ad2928a9a49df693b65e6", "section": "main", "headline": "Rs10m stolen from 559 bank accounts in ATM fraud", "index": "7", "excerpt": "No need to panic as the amount would be reimbursed to the affected clients, says marketing executive of HBL.", "detail_href": "https://www.dawn.com/news/1374623/rs10m-stolen-from-559-bank-accounts-in-atm-fraud", "imagepath": "https://i.dawn.com/medium/2017/12/5a2610a7cb611.jpg", "source": "dawn.com"}
 ]

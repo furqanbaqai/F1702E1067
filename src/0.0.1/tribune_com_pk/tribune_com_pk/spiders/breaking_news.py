@@ -34,9 +34,9 @@ class BreakingNewsSpider(scrapy.Spider):
             excerpt = response.xpath('//div[contains(@class,"breaking-news")]/div/div/div[contains(@class,"content")]/div/p/text()').extract_first()               
             triItem['source'] = 'tribune.com.pk'
             triItem['section'] = 'breaking'
-            triItem['headline'] = headline
-            triItem['head_hash_sha256'] =  hashlib.sha256(str.encode(headline)).hexdigest()
-            triItem['excerpt'] = excerpt
+            triItem['headline'] = headline.encode("ascii", "ignore").strip().decode("utf-8")
+            triItem['head_hash_sha256'] =  hashlib.sha256(headline.encode("ascii", "ignore").strip()).hexdigest()
+            triItem['excerpt'] = excerpt.encode("ascii", "ignore").strip().decode("utf-8")
             triItem['imagepath'] = imagepath
             triItem['detail_href'] = detail_href
             yield triItem

@@ -18,7 +18,7 @@ import scrapy
 import hashlib
 
 class QuotesSpider(scrapy.Spider):
-    name = "mainpage"
+    name = "topnews"
 
     # Constructor
     def start_requests(self):
@@ -37,9 +37,9 @@ class QuotesSpider(scrapy.Spider):
                 'source': 'dawn.com',
                 'section': 'main',
                 'index' : str(index),
-                'headline' : headline,
-                'head_hash_sha256' : hashlib.sha256(str.encode(headline)).hexdigest(),
-                'excerpt' : excerpt,
+                'headline' : headline.encode("ascii", "ignore").strip().decode("utf-8"),
+                'head_hash_sha256' : hashlib.sha256(headline.encode("ascii", "ignore").strip()).hexdigest(),
+                'excerpt' : excerpt.encode("ascii", "ignore").strip().decode("utf-8"),
                 'imagepath' : imgpath,
                 'detail_href' : det_href,
 
