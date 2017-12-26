@@ -11,4 +11,13 @@ import scrapy
 class DawnComItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    headline             = scrapy.Field()
+    head_hash_sha256     = scrapy.Field()
+    index                = scrapy.Field()
+    source               = scrapy.Field()
+    imagepath            = scrapy.Field()
+    detail_href          = scrapy.Field()
+    section              = scrapy.Field()
+    excerpt              = scrapy.Field()
+    authur               = scrapy.Field()
+    detailNews           = scrapy.Field()
