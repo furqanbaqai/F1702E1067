@@ -20,6 +20,7 @@ import hashlib
 import logging
 from dawn_com.items import DawnComItem
 from scrapy.http import Request
+from time import gmtime,strftime
 
 class QuotesSpider(scrapy.Spider):
     name = "topnews"
@@ -45,6 +46,7 @@ class QuotesSpider(scrapy.Spider):
             dawnItem['excerpt'] 			= excerpt.encode("ascii", "ignore").strip().decode("utf-8")
             dawnItem['imagepath'] 			= imgpath            
             dawnItem['detail_href'] 		= det_href
+            dawnItem['fetchedTime']         = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             # Saving items for subsequent detail poage call
             if det_href:
                 logging.info('*** following link:'+det_href)
@@ -59,5 +61,5 @@ class QuotesSpider(scrapy.Spider):
     # Procedure which will be called for parsing 
     def parseDetail_page(self, response):
         dawnItem = response.meta['dawnItem']
-        # dawnItem['authur'] = 'Bhai sahab'
+        dawnItem['authur'] = response.xpath('//article[@class="story"]/div[contains(@class,"template__header")]/div/span/a/text()').extract_first()
         yield dawnItem

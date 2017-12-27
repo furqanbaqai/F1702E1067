@@ -21,3 +21,4 @@ class DawnComItem(scrapy.Item):
     excerpt              = scrapy.Field()
     authur               = scrapy.Field()
     detailNews           = scrapy.Field()
+    fetchedTime          = scrapy.Field(serializer=str)
