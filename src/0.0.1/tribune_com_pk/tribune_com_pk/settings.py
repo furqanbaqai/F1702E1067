@@ -68,6 +68,10 @@ ROBOTSTXT_OBEY = True
 #    'tribune_com_pk.pipelines.TribuneComPkPipeline': 300,
 #}
 
+IMAGES_STORE  = '/home/baqai/scrapdisk/tribune_com_pk/'
+IMAGES_URLS_FIELD = 'image_urls'
+IMAGES_RESULT_FIELD = 'images'
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
@@ -88,3 +92,6 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+FEED_URI= 'tribune_pk.json'
+FEED_FORMAT = 'json'
