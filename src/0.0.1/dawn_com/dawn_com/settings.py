@@ -70,6 +70,16 @@ DOWNLOADER_MIDDLEWARES = {'scrapy.downloadermiddlewares.useragent.UserAgentMiddl
 #    'dawn_com.pipelines.DawnComPipeline': 300,
 #}
 
+# ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
+# ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
+IMAGES_STORE  = '/home/baqai/scrapdisk/dawn_com/'
+IMAGES_URLS_FIELD = 'image_urls'
+IMAGES_RESULT_FIELD = 'images'
+
+# ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
+# FILES_STORE = '/home/baqai/scrapdisk/dawn_com'
+
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
