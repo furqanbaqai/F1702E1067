@@ -33,6 +33,7 @@ class QuotesSpider(scrapy.Spider):
     # Procedure called for parsing the content
     def parse(self, response):        
         articles=response.xpath('//article[@data-layout="story"]')       
+        settings = self.settings
         for index,article in enumerate(articles):
             dawnItem = DawnComItem()
             headline = article.xpath('h2/a[@class="story__link"]/text()').extract_first()
@@ -52,7 +53,7 @@ class QuotesSpider(scrapy.Spider):
             dawnItem['detail_href'] 		= det_href
             dawnItem['fetchedTime']         = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             # Retriving news image in the disk
-            urlretrieve (imgpath, '/home/baqai/scrapdisk/dawn_com/'+head_hash+ imgpath.split('.')[3:][0]) 
+            urlretrieve (imgpath, settings['IMAGES_STORE']+head_hash+ imgpath.split('.')[3:][0]) 
             # Saving items for subsequent detail poage call
             if det_href:
                 logging.info('*** following link:'+det_href)
