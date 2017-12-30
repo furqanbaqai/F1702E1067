@@ -53,7 +53,7 @@ class QuotesSpider(scrapy.Spider):
             dawnItem['detail_href'] 		= det_href
             dawnItem['fetchedTime']         = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             # Retriving news image in the disk
-            urlretrieve (imgpath, settings['IMAGES_STORE']+head_hash+ imgpath.split('.')[3:][0]) 
+            urlretrieve (imgpath, settings['IMAGES_STORE']+head_hash+ '.' + imgpath.split('.')[3:][0]) 
             # Saving items for subsequent detail poage call
             if det_href:
                 logging.info('*** following link:'+det_href)
