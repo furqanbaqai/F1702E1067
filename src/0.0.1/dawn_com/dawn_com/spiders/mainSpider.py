@@ -49,7 +49,7 @@ class QuotesSpider(scrapy.Spider):
             dawnItem['head_hash_sha256'] 	= head_hash
             dawnItem['excerpt'] 			= excerpt.encode("ascii", "ignore").strip().decode("utf-8")
             dawnItem['image_urls'] 			= imgpath       
-            dawnItem['images']              = head_hash+ imgpath.split('.')[3:][0]          
+            dawnItem['images']              = head_hash+ '.' + imgpath.split('.')[3:][0]          
             dawnItem['detail_href'] 		= det_href
             dawnItem['fetchedTime']         = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             # Retriving news image in the disk
