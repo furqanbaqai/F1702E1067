@@ -22,3 +22,4 @@ class DawnComItem(scrapy.Item):
     authur               = scrapy.Field()
     detailNews           = scrapy.Field()
     fetchedTime          = scrapy.Field(serializer=str)
+    body                 = scrapy.Field()

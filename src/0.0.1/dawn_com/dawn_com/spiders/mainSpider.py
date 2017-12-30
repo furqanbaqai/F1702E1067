@@ -62,4 +62,10 @@ class QuotesSpider(scrapy.Spider):
     def parseDetail_page(self, response):
         dawnItem = response.meta['dawnItem']
         dawnItem['authur'] = response.xpath('//article[@class="story"]/div[contains(@class,"template__header")]/div/span/a/text()').extract_first()
+        body = response.xpath('//article[@class="story"]/div[contains(@class,"template__main")]/div/p/text()')
+        bodyText = ''
+        for index,bdTxt in enumerate(body):
+            if bdTxt:
+                bodyText = bodyText + bdTxt.get()
+        dawnItem['body'] = bodyText
         yield dawnItem
