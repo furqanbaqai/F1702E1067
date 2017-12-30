@@ -18,13 +18,15 @@ Change History
 import scrapy
 import hashlib
 import logging
+
+from urllib.request import urlretrieve
 from dawn_com.items import DawnComItem
 from scrapy.http import Request
 from time import gmtime,strftime
 
 class QuotesSpider(scrapy.Spider):
     name = "topnews"
-    allowed_domains = ['www.dawn.com']
+    allowed_domains = ['i.dawn.com','www.dawn.com']
     start_urls = ['https://www.dawn.com']
     
 
@@ -38,15 +40,19 @@ class QuotesSpider(scrapy.Spider):
             det_href = article.xpath('figure/div/a/@href').extract_first()
             imgpath = article.xpath('figure/div/a/img/@src').extract_first() 
             # Serializing the extracted components
+            head_hash                       = hashlib.sha256(headline.encode("ascii", "ignore").strip()).hexdigest()
             dawnItem['source']				= 'dawn.com'
             dawnItem['section']			    = 'main'
             dawnItem['index']				= str(index)
             dawnItem['headline']			= headline.encode("ascii", "ignore").strip().decode("utf-8")
-            dawnItem['head_hash_sha256'] 	= hashlib.sha256(headline.encode("ascii", "ignore").strip()).hexdigest()
+            dawnItem['head_hash_sha256'] 	= head_hash
             dawnItem['excerpt'] 			= excerpt.encode("ascii", "ignore").strip().decode("utf-8")
-            dawnItem['imagepath'] 			= imgpath            
+            dawnItem['image_urls'] 			= imgpath       
+            dawnItem['images']              = head_hash+ imgpath.split('.')[3:][0]          
             dawnItem['detail_href'] 		= det_href
             dawnItem['fetchedTime']         = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+            # Retriving news image in the disk
+            urlretrieve (imgpath, '/home/baqai/scrapdisk/dawn_com/'+head_hash+ imgpath.split('.')[3:][0]) 
             # Saving items for subsequent detail poage call
             if det_href:
                 logging.info('*** following link:'+det_href)
@@ -67,5 +73,5 @@ class QuotesSpider(scrapy.Spider):
         for index,bdTxt in enumerate(body):
             if bdTxt:
                 bodyText = bodyText + bdTxt.get()
-        dawnItem['body'] = bodyText
+        dawnItem['body'] = bodyText.encode("ascii","ignore").strip().decode("utf-8")
         yield dawnItem
