@@ -1,5 +1,5 @@
 # Aflatun # 
-[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) [![Visual Studio Team services](https://img.shields.io/vso/build/larsbrinkhoff/953a34b9-5966-4923-a48a-c41874cfb5f5/1.svg)](https://github.com/furqanbaqai) [![PyPI](https://img.shields.io/pypi/pyversions/Django.svg)](https://github.com/furqanbaqai/F1702E1067) [![Conda](https://img.shields.io/conda/pn/conda-forge/python.svg)](https://github.com/furqanbaqai/F1702E1067)
+[![Open Source Love](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) [![Visual Studio Team services](https://img.shields.io/vso/build/larsbrinkhoff/953a34b9-5966-4923-a48a-c41874cfb5f5/1.svg)](https://github.com/furqanbaqai) [![PyPI](https://img.shields.io/pypi/pyversions/Django.svg)](https://github.com/furqanbaqai/F1702E1067) [![Conda](https://img.shields.io/conda/pn/conda-forge/python.svg)](https://github.com/furqanbaqai/F1702E1067) 
 
 Intelligent AI based news analyzer which uses open AI platform and categorizes, tag and analyzes the news content.
 
