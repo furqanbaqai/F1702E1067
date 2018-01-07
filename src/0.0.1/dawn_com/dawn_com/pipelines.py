@@ -8,4 +8,5 @@
 
 class DawnComPipeline(object):
     def process_item(self, item, spider):
+        print("*** Pipelines called")
         return item

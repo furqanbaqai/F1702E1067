@@ -66,9 +66,9 @@ DOWNLOADER_MIDDLEWARES = {'scrapy.downloadermiddlewares.useragent.UserAgentMiddl
 
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'dawn_com.pipelines.DawnComPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'dawn_com.pipelines.DawnComPipeline': 300,
+}
 
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}

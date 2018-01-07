@@ -73,6 +73,6 @@ class QuotesSpider(scrapy.Spider):
         bodyText = ''
         for index,bdTxt in enumerate(body):
             if bdTxt:
-                bodyText = bodyText + bdTxt.get()
+                bodyText = bodyText + ' '+ bdTxt.get()
         dawnItem['body'] = bodyText.encode("ascii","ignore").strip().decode("utf-8")
         yield dawnItem
