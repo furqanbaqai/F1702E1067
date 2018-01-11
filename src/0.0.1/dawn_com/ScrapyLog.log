@@ -1,11 +1,10 @@
-2017-12-30 20:02:39 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: dawn_com)
-2017-12-30 20:02:39 [scrapy.utils.log] INFO: Overridden settings: {'DOWNLOAD_DELAY': 3, 'FEED_URI': 'dawn.json', 'TELNETCONSOLE_ENABLED': False, 'NEWSPIDER_MODULE': 'dawn_com.spiders', 'ROBOTSTXT_OBEY': True, 'FEED_FORMAT': 'json', 'BOT_NAME': 'dawn_com', 'LOG_FILE': 'ScrapyLog.log', 'CONCURRENT_REQUESTS': 3, 'SPIDER_MODULES': ['dawn_com.spiders'], 'LOG_LEVEL': 'INFO'}
-2017-12-30 20:02:39 [scrapy.middleware] INFO: Enabled extensions:
-['scrapy.extensions.feedexport.FeedExporter',
+2018-01-12 00:51:34 [scrapy.utils.log] INFO: Scrapy 1.4.0 started (bot: dawn_com)
+2018-01-12 00:51:34 [scrapy.utils.log] INFO: Overridden settings: {'LOG_LEVEL': 'INFO', 'LOG_FILE': 'ScrapyLog.log', 'NEWSPIDER_MODULE': 'dawn_com.spiders', 'DOWNLOAD_DELAY': 3, 'BOT_NAME': 'dawn_com', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['dawn_com.spiders'], 'TELNETCONSOLE_ENABLED': False, 'CONCURRENT_REQUESTS': 3}
+2018-01-12 00:51:34 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.memusage.MemoryUsage',
  'scrapy.extensions.corestats.CoreStats',
- 'scrapy.extensions.logstats.LogStats',
- 'scrapy.extensions.memusage.MemoryUsage']
-2017-12-30 20:02:39 [scrapy.middleware] INFO: Enabled downloader middlewares:
+ 'scrapy.extensions.logstats.LogStats']
+2018-01-12 00:51:34 [scrapy.middleware] INFO: Enabled downloader middlewares:
 ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
@@ -17,44 +16,54 @@
  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
  'scrapy.downloadermiddlewares.stats.DownloaderStats']
-2017-12-30 20:02:39 [scrapy.middleware] INFO: Enabled spider middlewares:
+2018-01-12 00:51:34 [scrapy.middleware] INFO: Enabled spider middlewares:
 ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
  'scrapy.spidermiddlewares.referer.RefererMiddleware',
  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
  'scrapy.spidermiddlewares.depth.DepthMiddleware']
-2017-12-30 20:02:39 [scrapy.middleware] INFO: Enabled item pipelines:
-[]
-2017-12-30 20:02:39 [scrapy.core.engine] INFO: Spider opened
-2017-12-30 20:02:39 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
-2017-12-30 20:02:43 [root] INFO: *** following link:https://www.dawn.com/news/1379766/shahbaz-sanaullah-should-resign-by-jan-7-or-face-consequences-all-parties-conference
-2017-12-30 20:02:43 [root] INFO: *** following link:https://www.dawn.com/news/1379767/us-considering-withholding-255m-in-aid-over-haqqani-network-operative-nyt
-2017-12-30 20:02:44 [root] INFO: *** following link:https://www.dawn.com/news/1379770/former-cjcsc-gen-khalid-shamim-wynne-passes-away-in-road-accident
-2017-12-30 20:02:44 [root] INFO: *** following link:https://www.dawn.com/news/1379694/sharifs-dash-to-saudi-arabia-fuels-suspicions
-2017-12-30 20:02:44 [root] INFO: *** following link:https://www.dawn.com/news/1379774/ayesha-gulalai-told-to-sit-behind-stage-occupied-by-men-to-show-respect-for-tribal-customs
-2017-12-30 20:02:44 [root] INFO: *** following link:https://www.dawn.com/news/1379692/man-absolved-of-blasphemy-charges-after-nine-years-in-prison
-2017-12-30 20:02:44 [root] INFO: *** following link:https://www.dawn.com/news/1379777/sindh-high-court-employee-held-over-killing-of-state-life-worker
-2017-12-30 20:02:44 [root] INFO: *** following link:https://www.dawn.com/news/1379759/police-arrest-rawalpindi-man-who-killed-1-held-25-of-his-family-hostage
-2017-12-30 20:03:12 [scrapy.core.engine] INFO: Closing spider (finished)
-2017-12-30 20:03:12 [scrapy.extensions.feedexport] INFO: Stored json feed (8 items) in: dawn.json
-2017-12-30 20:03:12 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
-{'downloader/request_bytes': 3102,
+2018-01-12 00:51:34 [stomp.py] INFO: Attempting connection to host 192.168.131.144, port 61613
+2018-01-12 00:51:34 [stomp.py] INFO: Established connection to host 192.168.131.144, port 61613
+2018-01-12 00:51:34 [stomp.py] INFO: Starting receiver loop
+2018-01-12 00:51:34 [scrapy.middleware] INFO: Enabled item pipelines:
+['dawn_com.pipelines.DawnComPipeline']
+2018-01-12 00:51:34 [scrapy.core.engine] INFO: Spider opened
+2018-01-12 00:51:34 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382243/6-year-old-zainabs-autopsy-suggests-child-endured-rape-captivity-before-murder
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382256/zainab-murder-case-punjab-police-chief-submits-report-to-supreme-court
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382253/sheikhupura-man-suspected-of-raping-murdering-8-year-old-killed-by-police
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382266/dissidents-nominate-abdul-quddus-bizenjo-as-new-balochistan-chief-minister
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382262/pm-abbasi-army-chief-visit-ssg-headquarters-in-cherat
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382272/richard-morin-takes-charge-as-first-ever-non-pakistani-ceo-of-psx
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382257/15-year-old-girl-found-dead-in-field-near-sargodha
+2018-01-12 00:51:38 [root] INFO: *** following link:https://www.dawn.com/news/1382269/asf-officials-son-confesses-to-staging-his-own-abduction-to-get-ransom
+2018-01-12 00:51:42 [root] INFO: Sending message
+2018-01-12 00:51:46 [root] INFO: Sending message
+2018-01-12 00:51:49 [root] INFO: Sending message
+2018-01-12 00:51:53 [root] INFO: Sending message
+2018-01-12 00:51:57 [root] INFO: Sending message
+2018-01-12 00:51:59 [root] INFO: Sending message
+2018-01-12 00:52:03 [root] INFO: Sending message
+2018-01-12 00:52:06 [root] INFO: Sending message
+2018-01-12 00:52:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-01-12 00:52:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3083,
  'downloader/request_count': 10,
  'downloader/request_method_count/GET': 10,
- 'downloader/response_bytes': 214028,
+ 'downloader/response_bytes': 226758,
  'downloader/response_count': 10,
  'downloader/response_status_count/200': 10,
  'finish_reason': 'finished',
- 'finish_time': datetime.datetime(2017, 12, 30, 16, 3, 12, 747570),
+ 'finish_time': datetime.datetime(2018, 1, 11, 20, 52, 6, 618486),
  'item_scraped_count': 8,
- 'log_count/INFO': 16,
- 'memusage/max': 53260288,
- 'memusage/startup': 53260288,
+ 'log_count/INFO': 26,
+ 'memusage/max': 53497856,
+ 'memusage/startup': 53497856,
  'request_depth_max': 1,
  'response_received_count': 10,
  'scheduler/dequeued': 9,
  'scheduler/dequeued/memory': 9,
  'scheduler/enqueued': 9,
  'scheduler/enqueued/memory': 9,
- 'start_time': datetime.datetime(2017, 12, 30, 16, 2, 39, 166677)}
-2017-12-30 20:03:12 [scrapy.core.engine] INFO: Spider closed (finished)
+ 'start_time': datetime.datetime(2018, 1, 11, 20, 51, 34, 329680)}
+2018-01-12 00:52:06 [scrapy.core.engine] INFO: Spider closed (finished)

@@ -76,6 +76,16 @@ IMAGES_STORE  = '/home/baqai/scrapdisk/dawn_com/'
 IMAGES_URLS_FIELD = 'image_urls'
 IMAGES_RESULT_FIELD = 'images'
 
+# Custom AMQ Settings
+AMQ_IP_ADD  = '192.168.131.144'
+AMQ_PORT    = 61613
+AMQ_UID     = 'admin'
+AMQ_PASS    = 'admin'
+# END
+
+LOG_LEVEL = 'WARNING'
+# LOG_FILE = 'ScrapyLog.log'
+
 # ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
 # FILES_STORE = '/home/baqai/scrapdisk/dawn_com'
 
@@ -101,5 +111,5 @@ IMAGES_RESULT_FIELD = 'images'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-FEED_URI= 'dawn.json'
-FEED_FORMAT = 'json'
+# FEED_URI= 'dawn.json'
+# FEED_FORMAT = 'json'
