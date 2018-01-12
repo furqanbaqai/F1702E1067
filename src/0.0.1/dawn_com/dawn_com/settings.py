@@ -81,10 +81,11 @@ AMQ_IP_ADD  = '192.168.131.144'
 AMQ_PORT    = 61613
 AMQ_UID     = 'admin'
 AMQ_PASS    = 'admin'
+AMQ_REQ     = 'DAWN_COM.REQ'
 # END
 
-LOG_LEVEL = 'WARNING'
-# LOG_FILE = 'ScrapyLog.log'
+LOG_LEVEL = 'INFO'
+LOG_FILE = 'scrapyLog.log'
 
 # ITEM_PIPELINES = {'scrapy.pipelines.files.FilesPipeline': 1}
 # FILES_STORE = '/home/baqai/scrapdisk/dawn_com'

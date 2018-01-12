@@ -73,8 +73,7 @@ class MainpageSpider(scrapy.Spider):
             
 
     # Procedure which will be called for parsing 
-    def parseDetail_page(self, response):
-        print("*** Calling detail proc")
+    def parseDetail_page(self, response):        
         triItem = response.meta['triItem']
         story = response.xpath('//div[contains(@class,"story")]')
         triItem['authur'] = story.xpath('div[@class="meta"]/div[@class="author"]/a[1]/text()').extract_first()        
