@@ -18,16 +18,19 @@ import time
 import os
 import logging
 
+EVA_HOME = os.environ.get('EVA_HOME',None)
+
 def job_scrapy_dawn():
     logging.info('Starting crawler')
-    output = os.popen('cd /mnt/hgfs/eva/dawn_com && scrapy crawl topnews').read()
+    output = os.popen('cd ' + EVA_HOME +'/dawn_com && scrapy crawl topnews').read()
     logging.debug('Output Recieved: '+output)
     logging.info('Crawler command finished')
 
 
 def job_scrapy_tribune():
     logging.info('Starting crawler: tribune_com_pk')
-    output = os.popen('cd /mnt/hgfs/eva/tribune_com_pk && scrapy crawl topnews').read()
+    # output = os.popen('cd /mnt/hgfs/eva/tribune_com_pk && scrapy crawl topnews').read()
+    output = os.popen('cd '+EVA_HOME+'/tribune_com_pk && scrapy crawl topnews').read()
     logging.debug('Output Recieved: ' + output)
     logging.info('Crawler command finished')
 
@@ -38,6 +41,16 @@ schedule.every(5).minutes.do(job_scrapy_dawn)
 schedule.every(5).minutes.do(job_scrapy_tribune)
 
 if __name__ == '__main__':
+    print('*******************')
+    print('  _____ ____ _  ')
+    print(' / -_) V / _` | ')
+    print(' \___|\_/\__,_| ')
+    print('*******************')
+    logging.info('Starting eva scheduler service')
+    logging.info('Cehcking required configurations..')
+    if EVA_HOME == None:
+        raise ValueError('Environment variable EVA_HOME not set. Exiting application')
+    logging.info('Configurations exist. Initiating scheduler...')
     while True:
         schedule.run_pending()
         time.sleep(1)

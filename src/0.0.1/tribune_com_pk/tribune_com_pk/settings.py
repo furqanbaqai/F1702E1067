@@ -68,12 +68,12 @@ ITEM_PIPELINES = {
     'tribune_com_pk.pipelines.TribuneComPkPipeline': 300,
 }
 
-IMAGES_STORE  = '/home/baqai/scrapdisk/tribune_com_pk/'
+IMAGES_STORE  = '/home/baqai/scrapdisk/'
 IMAGES_URLS_FIELD = 'image_urls'
 IMAGES_RESULT_FIELD = 'images'
 
 # Custom AMQ Settings
-AMQ_IP_ADD = '192.168.131.144'
+AMQ_IP_ADD = 'medusa'
 AMQ_PORT = 61613
 AMQ_UID = 'admin'
 AMQ_PASS = 'admin'
@@ -81,7 +81,7 @@ AMQ_REQ = 'TRIBUNE_COM_PK.REQ'
 # END
 
 LOG_LEVEL = 'INFO'
-LOG_FILE = 'scrapyLog.log'
+# LOG_FILE = 'scrapyLog.log'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html

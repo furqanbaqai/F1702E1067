@@ -60,7 +60,7 @@ class MainpageSpider(scrapy.Spider):
             opener=urllib.request.build_opener()
             opener.addheaders=[('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1941.0 Safari/537.36')]
             urllib.request.install_opener(opener)
-            urllib.request.urlretrieve(imagepath, settings['IMAGES_STORE']+ head_hash + '.' + imagepath.split('.')[3:][1])
+            urllib.request.urlretrieve(imagepath, settings['IMAGES_STORE'] + '/tribune_com_pk' + head_hash + '.' + imagepath.split('.')[3:][1])
             # urlretrieve (imagepath, settings['IMAGES_STORE']+head_hash+ imagepath.split('.')[3:][1]) 
             triItem['detail_href']      = detail_href
             triItem['fetchedTime']      = strftime("%Y-%m-%d %H:%M:%S", gmtime())                        
