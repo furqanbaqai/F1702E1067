@@ -10,6 +10,8 @@ import logging
 
 class TribuneComPkPipeline(object):
     stomp_connection = None
+    logger = logging.getLogger(__name__)
+
 
     def __init__(self, amqIPAddress, amqPort, amqUID, amqReq, amqPass):
         self.amqIPAddress = amqIPAddress
@@ -22,7 +24,7 @@ class TribuneComPkPipeline(object):
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
-            amqIPAddress=crawler.settings.get('MONGO_URI'),
+            amqIPAddress=crawler.settings.get('AMQ_IP_ADD'),
             amqPort=crawler.settings.get('AMQ_PORT'),
             amqUID=crawler.settings.get('AMQ_UID'),
             amqReq=crawler.settings.get('AMQ_REQ'),
@@ -30,7 +32,8 @@ class TribuneComPkPipeline(object):
         )
 
     def __connect(self):
-        TribuneComPkPipeline.stomp_connection = stomp.Connection([('192.168.131.144', 61613)])
+        TribuneComPkPipeline.logger.info("Establishing connection with host [" + self.amqIPAddress + "] and port [" + str(self.amqPort) + "]")
+        TribuneComPkPipeline.stomp_connection = stomp.Connection([(self.amqIPAddress, self.amqPort)])
         TribuneComPkPipeline.stomp_connection.start()
         TribuneComPkPipeline.stomp_connection.connect(self.amqUID, self.amqPass, wait=True)
 
@@ -44,9 +47,9 @@ class TribuneComPkPipeline(object):
 
     def process_item(self, item, spider):
         if TribuneComPkPipeline.stomp_connection.is_connected == False:
-            logging.warning("Re-initiating the connection...")
-            self.__connect()
-        logging.info("Sending message")
+             TribuneComPkPipeline.logger.warning("Re-initiating the connection...")
+             self.__connect()
+        TribuneComPkPipeline.logger.info("Sending message")
         TribuneComPkPipeline.stomp_connection.send(
             body=str(item), destination=self.amqReq, headers={'persistent': 'true'})
         #c.disconnect()

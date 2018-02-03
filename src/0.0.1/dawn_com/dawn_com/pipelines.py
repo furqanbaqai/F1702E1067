@@ -10,6 +10,7 @@ import logging
 
 class DawnComPipeline(object):
     stomp_connection = None
+    logger = logging.getLogger(__name__)
 
     def __init__(self, amqIPAddress, amqPort, amqUID, amqReq,amqPass):
         self.amqIPAddress   = amqIPAddress
@@ -22,15 +23,16 @@ class DawnComPipeline(object):
     @classmethod
     def from_crawler(cls, crawler):
         return cls(
-            amqIPAddress=crawler.settings.get('MONGO_URI'),
+            amqIPAddress=crawler.settings.get('AMQ_IP_ADD'),
             amqPort=crawler.settings.get('AMQ_PORT'),
             amqUID=crawler.settings.get('AMQ_UID'),
             amqReq=crawler.settings.get('AMQ_REQ'),
             amqPass=crawler.settings.get('AMQ_PASS', 'items')
         )
 
-    def __connect(self):        
-        DawnComPipeline.stomp_connection = stomp.Connection([('192.168.131.144', 61613)])
+    def __connect(self):                
+        DawnComPipeline.logger.info("Establishing connection with host ["+self.amqIPAddress + "] and port ["+str(self.amqPort)+"]")
+        DawnComPipeline.stomp_connection = stomp.Connection([(self.amqIPAddress, self.amqPort)])
         DawnComPipeline.stomp_connection.start()
         DawnComPipeline.stomp_connection.connect(self.amqUID, self.amqPass, wait=True)
 
@@ -38,15 +40,15 @@ class DawnComPipeline(object):
         self.__connect()
 
     def close_spider(self, spider):
-        logging.info("Closing AMQ connection and disconnecting as well")
+        DawnComPipeline.logger.info("Closing AMQ connection and disconnecting as well")
         DawnComPipeline.stomp_connection.disconnect()
         DawnComPipeline.stomp_connection.stop()
 
     def process_item(self, item, spider):        
         if DawnComPipeline.stomp_connection.is_connected == False:
-            logging.warning("Re-initiating the connection...")
+            DawnComPipeline.logger.warning("Re-initiating the connection...")
             self.__connect()
-        logging.info("Sending message")
+        DawnComPipeline.logger.info("Sending message")
         DawnComPipeline.stomp_connection.send(body=str(item), destination=self.amqReq, headers={'persistent': 'true'})
         #c.disconnect()
         #c.stop()

@@ -68,7 +68,7 @@ ITEM_PIPELINES = {
     'tribune_com_pk.pipelines.TribuneComPkPipeline': 300,
 }
 
-IMAGES_STORE  = '/home/baqai/scrapdisk/'
+IMAGES_STORE  = '/scrapdisk'
 IMAGES_URLS_FIELD = 'image_urls'
 IMAGES_RESULT_FIELD = 'images'
 

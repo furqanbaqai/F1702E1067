@@ -72,7 +72,8 @@ ITEM_PIPELINES = {
 
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
-IMAGES_STORE  = '/eva/scrapdisk/'
+# '/eva/scrapdisk/'
+IMAGES_STORE = '/scrapdisk/'
 IMAGES_URLS_FIELD = 'image_urls'
 IMAGES_RESULT_FIELD = 'images'
 

@@ -12,7 +12,7 @@ Authur: Muhammad Furqan Baqai [MFB]
 Change History
 [MFB:2017-11-30] Initial checkin
 [MFB:2017-12-26] Re-aligning by implementing items
-
+[MFB:2018-02-03] Bug Fix! Issue #3
 """
 
 import scrapy
@@ -48,12 +48,19 @@ class QuotesSpider(scrapy.Spider):
             dawnItem['headline']			= headline.encode("ascii", "ignore").strip().decode("utf-8")
             dawnItem['head_hash_sha256'] 	= head_hash
             dawnItem['excerpt'] 			= excerpt.encode("ascii", "ignore").strip().decode("utf-8")
-            dawnItem['image_urls'] 			= imgpath       
-            dawnItem['images']              = head_hash+ '.' + imgpath.split('.')[3:][0]          
+            dawnItem['image_urls'] 			= imgpath 
+            # ISSUE#3 https://github.com/furqanbaqai/F1702E1067/issues/3 Fix:
+            if imgpath is not None:
+                dawnItem['images']              = head_hash+ '.' + imgpath.split('.')[3:][0]          
+            else:  
+                dawnItem['images']          = None
             dawnItem['detail_href'] 		= det_href
             dawnItem['fetchedTime']         = strftime("%Y-%m-%d %H:%M:%S", gmtime())
             # Retriving news image in the disk
-            urlretrieve(imgpath, settings['IMAGES_STORE'] +'/dawn_com' + head_hash + '.' + imgpath.split('.')[3:][0])
+            # ISSUE#3 https://github.com/furqanbaqai/F1702E1067/issues/3 Fix:
+            if imgpath is not None:
+                logging.info("Saving images to location: " + settings['IMAGES_STORE'] + '/dawn_com/' + head_hash + '.' + imgpath.split('.')[3:][0])
+                urlretrieve(imgpath, settings['IMAGES_STORE'] +'/dawn_com/' + head_hash + '.' + imgpath.split('.')[3:][0])
             # Saving items for subsequent detail poage call
             if det_href:
                 logging.info('*** following link:'+det_href)
