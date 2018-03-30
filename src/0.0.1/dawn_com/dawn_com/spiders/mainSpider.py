@@ -81,5 +81,5 @@ class QuotesSpider(scrapy.Spider):
         for index,bdTxt in enumerate(body):
             if bdTxt:
                 bodyText = bodyText + ' '+ bdTxt.get()
-        dawnItem['body'] = bodyText.encode("ascii","ignore").strip().decode("utf-8")
+        dawnItem['detailNews'] = bodyText.encode("ascii", "ignore").strip().decode("utf-8")
         yield dawnItem

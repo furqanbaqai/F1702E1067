@@ -42,7 +42,7 @@ RUN groupadd -g 1013 evadmin && \
     chown -R evadmin:evadmin /app && \
     chown -R evadmin:evadmin /scrapdisk && \
     chmod -R 750 /app && \
-    chmod -R 750 /scradisk
+    chmod -R 750 /scrapdisk
 
 # Creating Volumnes
 VOLUME [ "/scrapdisk" ]

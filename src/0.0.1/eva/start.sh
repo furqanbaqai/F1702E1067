@@ -1,0 +1,1 @@
+nohup python evascheduler.py > log.out 2>&1  &

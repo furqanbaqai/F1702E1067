@@ -7,6 +7,7 @@
 
 import stomp
 import logging
+import json
 
 class TribuneComPkPipeline(object):
     stomp_connection = None
@@ -49,9 +50,10 @@ class TribuneComPkPipeline(object):
         if TribuneComPkPipeline.stomp_connection.is_connected == False:
              TribuneComPkPipeline.logger.warning("Re-initiating the connection...")
              self.__connect()
-        TribuneComPkPipeline.logger.info("Sending message")
+        TribuneComPkPipeline.logger.info("Sending message to AMQ..")
+        # (ID#4)BUG! Item is disctionary and it is not proper JSON. Parsing it to JSON
         TribuneComPkPipeline.stomp_connection.send(
-            body=str(item), destination=self.amqReq, headers={'persistent': 'true'})
+            body=json.dumps(dict(item)), destination=self.amqReq, headers={'persistent': 'true'})
         #c.disconnect()
         #c.stop()
         return item   

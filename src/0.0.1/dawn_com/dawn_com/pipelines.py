@@ -7,6 +7,7 @@
 
 import stomp
 import logging
+import json
 
 class DawnComPipeline(object):
     stomp_connection = None
@@ -49,7 +50,7 @@ class DawnComPipeline(object):
             DawnComPipeline.logger.warning("Re-initiating the connection...")
             self.__connect()
         DawnComPipeline.logger.info("Sending message")
-        DawnComPipeline.stomp_connection.send(body=str(item), destination=self.amqReq, headers={'persistent': 'true'})
-        #c.disconnect()
-        #c.stop()
+        # (ID#4)BUG! Item is disctionary and it is not proper JSON. Parsing it to JSON
+        DawnComPipeline.stomp_connection.send(body=json.dumps(
+            dict(item)), destination=self.amqReq, headers={'persistent': 'true'})
         return item
