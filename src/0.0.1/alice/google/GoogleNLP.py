@@ -65,7 +65,8 @@ class GoogleNLP(object):
                 salience = item['salience']
                 wik_url = None                
                 # save to database            
-                self.__saveItToDB(cursor, name, enttype, wik_url,salience)
+                if type != 'OTHER':
+                    self.__saveItToDB(cursor, name, enttype, wik_url,salience)
         self.connection.commit()
 
 
@@ -76,7 +77,7 @@ class GoogleNLP(object):
         if  entityID == None:            
             GoogleNLP.logger.info('Name does not exist. Saving content in the database')                        
             entityID = str(uuid.uuid4())
-            cursor.execute(self._SQL_INSERT_INTO_CONTENT,(entityID, name,enttype,wik_url))            
+            cursor.execute(self._SQL_INSERT_INTO_CONTENT,(entityID, name.title(),enttype,wik_url))            
         else:
             GoogleNLP.logger.info('Name exist. skipping the storing into entity store..')        
         # Insert content in the MetaContentTOEntities
