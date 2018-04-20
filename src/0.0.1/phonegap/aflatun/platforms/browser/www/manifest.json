@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Aflatun",
+  "short_name": "Aflatun",
+  "version": "pk.edu.vu.aflatun",
+  "description": "In-depth AI based analytics of the news",
+  "author": "PhoneGap Team",
+  "icons": [],
+  "start_url": "index.html"
+}

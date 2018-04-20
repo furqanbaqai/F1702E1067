@@ -1,0 +1,6 @@
+.panel-content{
+    text-align: center;
+}
+.panel-content * {
+    margin: 0 auto;
+}

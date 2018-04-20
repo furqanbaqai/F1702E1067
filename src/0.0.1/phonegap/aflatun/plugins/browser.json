@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-battery-status": {
+      "PACKAGE_NAME": "pk.edu.vu.aflatun"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "pk.edu.vu.aflatun"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "pk.edu.vu.aflatun"
+    }
+  }
+}

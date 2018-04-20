@@ -25,10 +25,14 @@ ENV AMQ_IP_ADD="medusa" \
 WORKDIR /app/
 
 # Add content to the container
-# ADD . /app
+ADD /temp/ /app
+# COPY ../dawn_com/* /app/
 
 # Install all required dependencies
-RUN pip install scrapy && \
+RUN apt-get update &&\
+    apt-get -y upgrade &&\
+    pip install --upgrade pip && \
+    pip install scrapy && \
     pip install stomp.py && \
     pip install schedule && \
     pip install bs4
@@ -45,11 +49,11 @@ RUN groupadd -g 1013 evadmin && \
     chmod -R 750 /scrapdisk
 
 # Creating Volumnes
-VOLUME [ "/scrapdisk" ]
+# VOLUME [ "/scrapdisk" ]
 
 
 # SET user for any further commands
 # USER evadmin
 
 
-CMD ['bash']
+CMD python /app/eva/evascheduler.py

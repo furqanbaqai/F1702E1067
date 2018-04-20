@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>    
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; http://code.jquery.com; media-src *" />   -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline' http://code.jquery.com;http://192.168.139.180:5000; media-src *" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
+    -->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <title>Aflatun::News Aggregator</title>
+</head>
+
+<!-- <body onload="onDeviceReady()">-->
+ <body>
+    <div class="app">        
+        <div data-role="page" id="home">                           
+            <div data-role="header">
+                <a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-arrow-l ui-btn-icon-left" style="display:none" id='btnBack'>&nbsp;Back</a>
+                <h1>News Aggregator</h1>
+            </div>
+            <div data-role="content" id="content">                                               
+            </div>   
+            <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:800px;max-height: 600px"
+                class="ui-corner-all">
+                <div data-role="header" data-theme="a" class="ui-corner-top">
+                    <h1>Tags</h1>
+                </div>
+                <div data-role="content" data-theme="a" class="ui-corner-bottom ui-content">                    
+                    <p id='nTgs'></p>
+                    <a id="channelBtnCancel" href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>                    
+                </div>
+                
+            </div>
+            <div data-role="content" id="newsCont" style="display:none" class="ui-body ui-body-a ui-corner-all">                
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search tags..." data-inset="true" id='tagsList'>
+                </ul>
+            </div>
+        </div>
+        <div data-role="page" id="error" class='display:none'>            
+            <div style="margin:0 auto;margin-left:auto;margin-right:auto;align:center;text-align:center;vertical-align: center">
+                <img src="img/no-internet-connection_1x.png" width="300px" height="200px" style="align-content: center"></img>
+                <h3 style="color:grey" id="errorHd"></h3>                                
+            </div>
+        </div>             
+
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>    
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>    
+    <script type="text/javascript" src="js/index.js"></script>
+
+</body>
+
+</html>
