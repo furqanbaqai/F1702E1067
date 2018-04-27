@@ -7,7 +7,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; http://code.jquery.com; media-src *" />   -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline' http://code.jquery.com;http://192.168.139.180:5000; media-src *" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline' http://code.jquery.com; connect-src http://192.168.0.8; media-src *" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
 
@@ -15,7 +15,8 @@
     <!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme.css" />
     -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
     <title>Aflatun::News Aggregator</title>
 </head>
 
@@ -28,18 +29,7 @@
                 <h1>News Aggregator</h1>
             </div>
             <div data-role="content" id="content">                                               
-            </div>   
-            <div data-role="popup" id="popupDialog" data-overlay-theme="a" data-theme="c" data-dismissible="false" style="max-width:800px;max-height: 600px"
-                class="ui-corner-all">
-                <div data-role="header" data-theme="a" class="ui-corner-top">
-                    <h1>Tags</h1>
-                </div>
-                <div data-role="content" data-theme="a" class="ui-corner-bottom ui-content">                    
-                    <p id='nTgs'></p>
-                    <a id="channelBtnCancel" href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Cancel</a>                    
-                </div>
-                
-            </div>
+            </div>         
             <div data-role="content" id="newsCont" style="display:none" class="ui-body ui-body-a ui-corner-all">                
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search tags..." data-inset="true" id='tagsList'>
                 </ul>
@@ -54,8 +44,10 @@
 
     </div>
     <script type="text/javascript" src="cordova.js"></script>    
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>    
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>    
+    <!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>     
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>    -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
 </body>

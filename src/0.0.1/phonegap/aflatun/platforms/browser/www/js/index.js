@@ -9,7 +9,7 @@ $(document).ready(function () {
 function onDeviceReady() {
     console.log('Device is all ready');    
     $.ajaxSetup({
-        timeout: 3000
+        timeout: 7000
     });
     // Step#1: Get top 10 news            
     // getTopNews();
@@ -22,8 +22,9 @@ function getTopNewsAJAX(){
     $('#content').show();
     $('#newsCont').hide();
     $('#btnBack').hide();
-    $("#content").html('');
-    $.get("http://192.168.0.4/news/api/v1.0/topnews",function(data){},"json")
+    $("#content").html('');    
+    alert('Calling: http://192.168.0.8/news/api/v1.0/topnews');
+    $.get("http://192.168.0.8/news/api/v1.0/topnews",function(data){},"json")
         .done(function(data){
             console.log("Response received...");
              $.each(data.result, function (index, item) {
@@ -70,7 +71,7 @@ function registerDisplayTags(){
         console.log('Calling service to fetch tags.');
         console.log('Calling URL:' + "http://192.168.0.8/news/api/v1.0/entities/" + $(this).attr('cId'));
         $.get(
-            "http://192.168.0.4/news/api/v1.0/entities/" + $(this).attr('cId'),function(data){},"json")
+            "http://192.168.0.8/news/api/v1.0/entities/" + $(this).attr('cId'),function(data){},"json")
                 .done(function(data){
                     console.log('Response received');                                        
                     // TODO! Iterate through the response and display all tags                    
