@@ -23,8 +23,8 @@ function getTopNewsAJAX(){
     $('#newsCont').hide();
     $('#btnBack').hide();
     $("#content").html('');    
-    alert('Calling: http://192.168.0.8/news/api/v1.0/topnews');
-    $.get("http://192.168.0.8/news/api/v1.0/topnews",function(data){},"json")
+    // alert('Calling: http://192.168.0.8/news/api/v1.0/topnews');
+    $.get("http://192.168.0.17/news/api/v1.0/topnews",function(data){},"json")
         .done(function(data){
             console.log("Response received...");
              $.each(data.result, function (index, item) {
@@ -69,9 +69,10 @@ function getTopNewsAJAX(){
 function registerDisplayTags(){
     $(document).on('click','#tags',function(){        
         console.log('Calling service to fetch tags.');
-        console.log('Calling URL:' + "http://192.168.0.8/news/api/v1.0/entities/" + $(this).attr('cId'));
+        console.log('Calling URL:' + "http://192.168.0.17/news/api/v1.0/entities/" + $(this).attr('cId'));
         $.get(
-            "http://192.168.0.8/news/api/v1.0/entities/" + $(this).attr('cId'),function(data){},"json")
+            "http://192.168.0.17/news/api/v1.0/entities/" + $(this).attr('cId'),
+                function (data) {}, "json")
                 .done(function(data){
                     console.log('Response received');                                        
                     // TODO! Iterate through the response and display all tags                    
